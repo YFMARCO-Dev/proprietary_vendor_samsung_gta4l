@@ -35,7 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gta4l/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile4.xml \
     vendor/samsung/gta4l/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile5.xml \
     vendor/samsung/gta4l/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile6.xml \
-    vendor/samsung/gta4l/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/samsung/gta4l/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/samsung/gta4l/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/samsung/gta4l/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
@@ -44,7 +43,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gta4l/proprietary/vendor/etc/locale/plmn_delta_zh-rCN.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rCN.bin \
     vendor/samsung/gta4l/proprietary/vendor/etc/locale/plmn_delta_zh-rHK.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rHK.bin \
     vendor/samsung/gta4l/proprietary/vendor/etc/locale/plmn_delta_zh-rTW.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rTW.bin \
+    vendor/samsung/gta4l/proprietary/vendor/etc/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
+    vendor/samsung/gta4l/proprietary/vendor/etc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
     vendor/samsung/gta4l/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
+    vendor/samsung/gta4l/proprietary/vendor/etc/pdpcnt-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pdpcnt-conf.xml \
     vendor/samsung/gta4l/proprietary/vendor/etc/plmn_delta.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta.bin \
     vendor/samsung/gta4l/proprietary/vendor/etc/plmn_delta_attaio.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_attaio.bin \
     vendor/samsung/gta4l/proprietary/vendor/etc/plmn_delta_hktw.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_hktw.bin \
@@ -54,6 +56,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/bdwlan.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/bdwlan.bin \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/grippower.info:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/grippower.info \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/regdb.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/regdb.bin \
+    vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T505.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T505.mbn \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T505C.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T505C.mbn \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T505N.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T505N.mbn \
@@ -62,6 +65,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcne \
     libcneapiclient \
+    libpdnotifier \
+    libsystem_health_mon \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.factory@2.2 \
@@ -80,17 +85,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@1.1 \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
-    libengmode_client \
     libnetmgr_common \
-    libpdnotifier \
     libqmiextservices \
     libqmiservices-sem-ext \
     libril_sem \
     libsec-ril \
-    libsystem_health_mon \
     vendor.samsung.hardware.radio.bridge@2.0 \
     vendor.samsung.hardware.radio.bridge@2.1 \
     vendor.samsung.hardware.radio.channel@2.0 \
+    CACertService \
     CneApp \
     adpl \
     cnd \

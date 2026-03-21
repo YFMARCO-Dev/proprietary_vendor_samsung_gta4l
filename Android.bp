@@ -167,6 +167,94 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libpdnotifier",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libpdnotifier.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_encdec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libpdnotifier.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_encdec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsystem_health_mon",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libsystem_health_mon.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsystem_health_mon.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.data.factory@2.0",
     owner: "samsung",
     strip: {
@@ -1095,36 +1183,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpdnotifier",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpdnotifier.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_encdec",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqmiextservices",
     owner: "samsung",
     strip: {
@@ -1250,10 +1308,13 @@ cc_prebuilt_library_shared {
                 "libjsoncpp",
                 "libvkmanager_vendor",
                 "libengmode_client",
+                "libbase",
+                "libbinder_ndk",
                 "vendor.samsung.hardware.radio.channel@2.0",
                 "libsecnativefeature",
                 "libfloatingfeature",
                 "libsemnativecarrierfeature",
+                "libnlnetmgr",
                 "libtime_genoff",
                 "libmdmdetect",
                 "libdsutils",
@@ -1268,36 +1329,11 @@ cc_prebuilt_library_shared {
                 "libqmiextservices",
                 "libqmiservices-sem-ext",
                 "libidl",
+                "libqmi_common_so",
+                "libqmi_encdec",
                 "libdiag",
                 "libc++",
                 "libprotobuf-cpp-full-3.9.1-vendorcompat",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsystem_health_mon",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsystem_health_mon.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -1393,6 +1429,17 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
+    soc_specific: true,
+}
+
+android_app_import {
+    name: "CACertService",
+    owner: "samsung",
+    apk: "proprietary/vendor/app/CACertService/CACertService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
     soc_specific: true,
 }
 
