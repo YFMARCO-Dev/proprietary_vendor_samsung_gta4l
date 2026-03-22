@@ -66,7 +66,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcne \
     libcneapiclient \
+    libnetmgr_common \
+    libnlnetmgr \
     libpdnotifier \
+    libqmiextservices \
+    libqmiservices-sem-ext \
+    libril_sem \
+    libsec-ril \
     libsystem_health_mon \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
@@ -86,12 +92,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@1.1 \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
-    libnetmgr_common \
-    libnlnetmgr \
-    libqmiextservices \
-    libqmiservices-sem-ext \
-    libril_sem \
-    libsec-ril \
     vendor.samsung.hardware.radio.bridge@2.0 \
     vendor.samsung.hardware.radio.bridge@2.1 \
     vendor.samsung.hardware.radio.channel@2.0 \
