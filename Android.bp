@@ -4,9 +4,9 @@
 
 soong_namespace {
     imports: [
-        "hardware/samsung",
+        "vendor/samsung/sm6115-common",
         "vendor/qcom/opensource/dataservices",
-        "vendor/samsung/gta4l-common",
+        "vendor/qcom/opensource/display",
     ],
 }
 
