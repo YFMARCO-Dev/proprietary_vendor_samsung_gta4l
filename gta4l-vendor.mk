@@ -39,6 +39,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gta4l/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/samsung/gta4l/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/samsung/gta4l/proprietary/vendor/etc/init/mutualex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mutualex.rc \
+    vendor/samsung/gta4l/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/samsung/gta4l/proprietary/vendor/etc/locale/plmn_delta_eng.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_eng.bin \
     vendor/samsung/gta4l/proprietary/vendor/etc/locale/plmn_delta_zh-rCN.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rCN.bin \
     vendor/samsung/gta4l/proprietary/vendor/etc/locale/plmn_delta_zh-rHK.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rHK.bin \
@@ -86,6 +87,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
     libnetmgr_common \
+    libnlnetmgr \
     libqmiextservices \
     libqmiservices-sem-ext \
     libril_sem \
@@ -98,4 +100,5 @@ PRODUCT_PACKAGES += \
     adpl \
     cnd \
     rild \
-    mutualex
+    mutualex \
+    netmgrd
