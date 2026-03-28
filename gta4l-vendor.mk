@@ -57,13 +57,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/bdwlan.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/bdwlan.bin \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/grippower.info:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/grippower.info \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/regdb.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/regdb.bin \
-    vendor/samsung/gta4l/proprietary/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T505.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T505.mbn \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T505C.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T505C.mbn \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T505N.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T505N.mbn \
     vendor/samsung/gta4l/proprietary/vendor/firmware/wlanmdsp_SM-T507.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp_SM-T507.mbn
 
 PRODUCT_PACKAGES += \
+    libqmi_csvt_srvc \
     libcne \
     libcneapiclient \
     libnetmgr_common \
@@ -101,4 +101,5 @@ PRODUCT_PACKAGES += \
     cnd \
     rild \
     mutualex \
-    netmgrd
+    netmgrd \
+    ks

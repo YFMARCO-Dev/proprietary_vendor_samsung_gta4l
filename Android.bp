@@ -11,6 +11,55 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqmi_csvt_srvc",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqmi_csvt_srvc.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdiag",
+                "libqmi_legacy",
+                "libqmiservices",
+                "libqcci_legacy",
+                "libqmi_client_qmux",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqmi_csvt_srvc.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdiag",
+                "libqmi_legacy",
+                "libqmiservices",
+                "libqcci_legacy",
+                "libqmi_client_qmux",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcne",
     owner: "samsung",
     strip: {
@@ -1255,6 +1304,33 @@ cc_prebuilt_binary {
                 "libqti_vndfwk_detect",
                 "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ks",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ks",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
                 "libm",
                 "libdl",
             ],
