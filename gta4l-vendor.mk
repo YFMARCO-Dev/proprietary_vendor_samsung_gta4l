@@ -66,8 +66,6 @@ PRODUCT_PACKAGES += \
     libqmi_csvt_srvc \
     libcne \
     libcneapiclient \
-    libnetmgr_common \
-    libnlnetmgr \
     libpdnotifier \
     libqmiextservices \
     libqmiservices-sem-ext \
